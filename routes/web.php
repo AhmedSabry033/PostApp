@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', 'PostController@index')->name('posts');
+Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::post('/posts/store', 'PostController@store')->name('posts.store');
+
 //Route::get('/posts', 'PostController@index')->name('posts')->middleware(['auth']);
 //Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts');
 

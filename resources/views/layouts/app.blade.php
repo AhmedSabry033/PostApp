@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('posts') }}">{{ __('Posts') }}</a>
+                            <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Posts') }}</a>
                         </li>
                     </ul>
 

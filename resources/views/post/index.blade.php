@@ -8,7 +8,8 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    <form action="" method="post" class="form mb-4">
+                    <form action="{{ route('posts.store') }}" method="post" class="form mb-4">
+                        @csrf
                         <div class="form-group">
                             <textarea name="body" id="body" cols="70" rows="5" class="forn-control"></textarea>
                         </div>

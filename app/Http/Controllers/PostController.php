@@ -15,4 +15,9 @@ class PostController extends Controller
     {
         return view('post.index');
     }
+
+    public function store()
+    {
+        dd('work');
+    }
 }
