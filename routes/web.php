@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/posts', 'PostController@index')->name('posts');
+//Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
