@@ -18,7 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', 'PostController@index')->name('posts');
+//Route::get('/posts', 'PostController@index')->name('posts')->middleware(['auth']);
 //Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts');
+
+// Route::group(['middleware' => ['auth']], function() {
+//     Route::get('/posts', 'PostController@index')->name('posts');
+// });
 
 
 Auth::routes();
