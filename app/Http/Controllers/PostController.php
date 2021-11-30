@@ -16,8 +16,12 @@ class PostController extends Controller
         return view('post.index');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        dd('work');
+        $this->validate($request, [
+            'body' => 'required|max:200'
+        ]);
+
+        dd('validated');
     }
 }
