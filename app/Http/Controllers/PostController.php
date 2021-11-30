@@ -17,7 +17,7 @@ class PostController extends Controller
         //$posts = auth()->user()->posts; // to get posts from user
 
         //$posts = Post::orderBY('created_at', 'desc')->paginate(3);
-        $posts = Post::latest()->paginate(3);
+        $posts = Post::with(['user'])->latest()->paginate(20);
 
         //return view('post.index', compact('posts'));
 
