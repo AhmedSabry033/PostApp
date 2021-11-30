@@ -29,7 +29,15 @@
                                 <div class="media-body">
                                     <h6>{{ $post->user->name }} ({{ $post->created_at->diffForHumans() }})</h6>
 
-                                    <p class="mt-2">{{ $post->body }}</p>
+                                    <p class="mt-2 mb-2">{{ $post->body }}</p>
+
+                                    @if($post->ownsPost(Auth()->user()))
+                                    <form action="{{ route('posts.destroy', $post) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-link">Delete</button>
+                                    </form>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach

@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/posts', 'PostController@index')->name('posts.index');
 Route::post('/posts/store', 'PostController@store')->name('posts.store');
+Route::delete('/posts/{post}', 'PostController@destroy')->name('posts.destroy');
+
 
 //Route::get('/posts', 'PostController@index')->name('posts')->middleware(['auth']);
 //Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts');
