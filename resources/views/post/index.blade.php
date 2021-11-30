@@ -33,6 +33,8 @@
                                 </div>
                             </div>
                         @endforeach
+
+                        {{ $posts->links() }}
                     @else
                         <p class="mb-0">There are no posts</p>
                     @endif
