@@ -22,6 +22,10 @@ class PostController extends Controller
             'body' => 'required|max:200'
         ]);
 
-        dd('validated');
+        $request->user()->posts()->create([
+            'body' => $request->get('body')
+        ]);
+
+        return back();
     }
 }
