@@ -22,6 +22,20 @@
 
                         <button type="submit" class="btn btn-primary">Post</button>
                     </form>
+
+                    @if($posts->count())
+                        @foreach ($posts as $post)
+                            <div class="media mb-2">
+                                <div class="media-body">
+                                    <h6>{{ $post->user->name }} (date)</h6>
+
+                                    <p class="mt-2">{{ $post->body }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                        <p class="mb-0">There are no posts</p>
+                    @endif
                 </div>
             </div>
         </div>
