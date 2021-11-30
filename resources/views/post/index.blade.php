@@ -27,7 +27,7 @@
                         @foreach ($posts as $post)
                             <div class="media mb-2">
                                 <div class="media-body">
-                                    <h6>{{ $post->user->name }} (date)</h6>
+                                    <h6>{{ $post->user->name }} ({{ $post->created_at->diffForHumans() }})</h6>
 
                                     <p class="mt-2">{{ $post->body }}</p>
                                 </div>
